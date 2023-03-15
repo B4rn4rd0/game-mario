@@ -290,13 +290,13 @@ function manualControl(character){
   
   if(character.live){
     if(noseX < 300){
-      character.velocity.x-=gameConfig.moveSpeed;
+      character.velocity.x+=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(-1);
     }
 
     if(noseX > 300){
-      character.velocity.x+=gameConfig.moveSpeed;
+      character.velocity.x-=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(1);
     }
